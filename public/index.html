@@ -25,21 +25,23 @@
     <noscript>
       You need to enable JavaScript to run this app.
     </noscript>
-    <script>
+    <!-- <script>
        if (typeof cordova === 'undefined') {
       console.log("navigator: ", navigator.userAgent)
       if (navigator.userAgent.toLowerCase().match(/android/)) {
           console.log( "reading js");
-          document.write('<script charset="utf-8" src="/js/android/cordova.js"><\/script>');
+          document.write('<script charset="utf-8" src="/js/slim_android/cordova.js"><\/script>');
           document.write('<script charset="utf-8" src="/js/js_lib/common.js"><\/script>');
+          console.log("Included js");
+         console.log("cordova: ", cordova);
       } else if (navigator.userAgent.toLowerCase().match(/iphone/) || navigator.userAgent.toLowerCase().match(/ipad/) || navigator.userAgent.toLowerCase().match(/ipod/)) {
-          document.write('<script charset="utf-8" src="/js/ios/cordova.js"><\/script>');
-          document.write('<script charset="utf-8" src="/js/js_lib/common.js"><\/script>');
+          document.write('<script charset="utf-8" src="/src/js/ios/cordova.js"><\/script>');
+          document.write('<script charset="utf-8" src="/src/js/js_lib/common.js"><\/script>');
       }
     } else {
         console.log("don't need to include cordova, already included");
     }
-    </script>
+    </script> -->
     <div id="root"></div>
     <!--
       This HTML file is a template.

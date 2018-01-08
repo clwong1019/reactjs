@@ -1,15 +1,15 @@
 $(document).ready(function() {
     document.addEventListener("deviceready", onDeviceReadyTouch, false);
-    document.getElementById('write').addEventListener('click', writeToLocal, false);
-    document.getElementById('getPes').addEventListener('click', getData('pes'), false);
-    document.getElementById('getTemp').addEventListener('click', getData('temp'), false);
-    document.getElementById('clear').addEventListener('click', clearData, false);
+    // document.getElementById('write').addEventListener('click', writeToLocal, false);
+    // document.getElementById('getPes').addEventListener('click', getData('pes'), false);
+    // document.getElementById('getTemp').addEventListener('click', getData('temp'), false);
+    // document.getElementById('clear').addEventListener('click', clearData, false);
 });
 
 
 function onDeviceReadyTouch() {
-    init3d();
-    startPdfHandler();
+    // init3d();
+    // startPdfHandler();
 }
 
 function init3d() {
