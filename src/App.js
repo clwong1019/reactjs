@@ -3,21 +3,17 @@ import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
-  constructor() {
-    super();
-    if (typeof cordova === 'undefined') {
-      console.log("navigator: ", navigator.userAgent)
-      if (navigator.userAgent.toLowerCase().match(/android/)) {
-          console.log( "reading js");
-          document.write('<script charset="utf-8" src="https://raw.githubusercontent.com/clwong1019/reactjs/master/src/js/android/cordova.js"><\/script>');
-          document.write('<script charset="utf-8" src="https://raw.githubusercontent.com/clwong1019/reactjs/master/src/js/js_lib/common.js"><\/script>');
-      } else if (navigator.userAgent.toLowerCase().match(/iphone/) || navigator.userAgent.toLowerCase().match(/ipad/) || navigator.userAgent.toLowerCase().match(/ipod/)) {
-          document.write('<script charset="utf-8" src="https://raw.githubusercontent.com/clwong1019/reactjs/master/src/js/ios/cordova.js"><\/script>');
-          document.write('<script charset="utf-8" src="https://raw.githubusercontent.com/clwong1019/reactjs/master/src/js/js_lib/common.js"><\/script>');
-      }
-    } else {
-        console.log("don't need to include cordova, already included");
-    }
+  constructor(props) {
+    super(props);
+    this.state = {
+      result: ""
+    };
+  }
+
+  scanQR = () => {
+    console.log("Scanning QR code");
+    this.state.result = "Scanning";
+    return this.state.result;
   }
   render() {
     return (
@@ -29,6 +25,8 @@ class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
+        <button type="button" onClick={this.scanQR}>Scan QR code</button>
+        <p id="result">{this.state.result}</p>
       </div>
     );
   }
