@@ -1,4 +1,4 @@
-$(document).ready(function() {
+jQuery(document).ready(function() {
     document.addEventListener("deviceready", onDeviceReadyTouch, false);
     // document.getElementById('write').addEventListener('click', writeToLocal, false);
     // document.getElementById('getPes').addEventListener('click', getData('pes'), false);
@@ -8,8 +8,9 @@ $(document).ready(function() {
 
 
 function onDeviceReadyTouch() {
-    init3d();
-    startPdfHandler();
+    console.log("common.js --DeviceReady");
+    // init3d();
+    // startPdfHandler();
 }
 
 function init3d() {

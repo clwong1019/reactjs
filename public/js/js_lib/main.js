@@ -8,11 +8,11 @@ $(document).ready(function () {
 });
 
 function onDeviceReady() {
-    //console.log("~~~~~~~~~ jb_lib ~~~~~~~~~");
-    //console.log(">>>>>>>> (1) device ready " + getTimeStamp() + " <<<<<<<<");
+    console.log("~~~~~~~~~ jb_lib ~~~~~~~~~");
+    console.log(">>>>>>>> (1) device ready " + getTimeStamp() + " <<<<<<<<");
 
-    document.addEventListener("mfpjsonjsloaded", onMfpjsonjsloaded, false);
-    document.addEventListener("backbutton", onBackKeyDown, false);
+    // document.addEventListener("mfpjsonjsloaded", onMfpjsonjsloaded, false);
+    // document.addEventListener("backbutton", onBackKeyDown, false);
 }
 
 function onMfpjsonjsloaded() {

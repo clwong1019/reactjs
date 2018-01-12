@@ -1,4 +1,4 @@
-cordova.define("cordova-plugin-globalization.GlobalizationError", function(require, exports, module) {
+cordova.define("cordova-plugin-network-information.Connection", function(require, exports, module) {
 /*
  *
  * Licensed to the Apache Software Foundation (ASF) under one
@@ -21,23 +21,17 @@ cordova.define("cordova-plugin-globalization.GlobalizationError", function(requi
 */
 
 /**
- * Globalization error object
- *
- * @constructor
- * @param code
- * @param message
+ * Network status
  */
-var GlobalizationError = function (code, message) {
-    this.code = code || null;
-    this.message = message || '';
+module.exports = {
+    UNKNOWN: 'unknown',
+    ETHERNET: 'ethernet',
+    WIFI: 'wifi',
+    CELL_2G: '2g',
+    CELL_3G: '3g',
+    CELL_4G: '4g',
+    CELL: 'cellular',
+    NONE: 'none'
 };
-
-// Globalization error codes
-GlobalizationError.UNKNOWN_ERROR = 0;
-GlobalizationError.FORMATTING_ERROR = 1;
-GlobalizationError.PARSING_ERROR = 2;
-GlobalizationError.PATTERN_ERROR = 3;
-
-module.exports = GlobalizationError;
 
 });
