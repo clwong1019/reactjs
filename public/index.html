@@ -24,6 +24,8 @@
           console.log("Device Ready");
           document.addEventListener("offline", checkConnection, false);
           document.addEventListener("online", checkConnection, false);
+          console.log("App version:", AppVersion.version); // e.g. "1.2.3" 
+          console.log("App version build: ", AppVersion.build); // e.g. 1234 
         }
         function checkConnection() {
           var networkState = navigator.connection.type;
