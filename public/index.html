@@ -14,7 +14,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="%PUBLIC_URL%/js/android/cordova.js"></script>
     <script src="%PUBLIC_URL%/js/js_lib/common.js"></script>
-    <script src="%PUBLIC_URL%/js/scan.js"></script>
     
     <script type="text/javascript" charset="utf-8">
         function onLoad() {
@@ -25,7 +24,9 @@
           document.addEventListener("offline", checkConnection, false);
           document.addEventListener("online", checkConnection, false);
           console.log("App version:", AppVersion.version); // e.g. "1.2.3" 
+          console.log("DONE");
           console.log("App version build: ", AppVersion.build); // e.g. 1234 
+          
         }
         function checkConnection() {
           var networkState = navigator.connection.type;

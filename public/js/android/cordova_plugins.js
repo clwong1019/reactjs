@@ -49,6 +49,22 @@ module.exports = [
         "clobbers": [
             "AppVersion"
         ]
+    },
+    {
+        "id": "com.cordova.plugins.cookiemaster.cookieMaster",
+        "file": "plugins/com.cordova.plugins.cookiemaster/www/cookieMaster.js",
+        "pluginId": "com.cordova.plugins.cookiemaster",
+        "clobbers": [
+            "cookieMaster"
+        ]
+    },
+    {
+        "id": "cordova-plugin-android-fingerprint-auth.FingerprintAuth",
+        "file": "plugins/cordova-plugin-android-fingerprint-auth/www/FingerprintAuth.js",
+        "pluginId": "cordova-plugin-android-fingerprint-auth",
+        "clobbers": [
+            "FingerprintAuth"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -60,7 +76,9 @@ module.exports.metadata =
     "cordova-plugin-whitelist": "1.3.3",
     "cordova-plugin-device": "2.0.1",
     "cordova-plugin-network-information": "2.0.1",
-    "cordova-plugin-appversion": "1.0.0"
+    "cordova-plugin-appversion": "1.0.0",
+    "com.cordova.plugins.cookiemaster": "1.0.0",
+    "cordova-plugin-android-fingerprint-auth": "1.4.1"
 };
 // BOTTOM OF METADATA
 });
